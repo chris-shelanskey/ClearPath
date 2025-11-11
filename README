@@ -38,4 +38,4 @@ Where:
 - `effort` is estimated hours  
 - `urgency = max(0, 10 - days_until_deadline)`
 
-This generates a dynamic score used to rank tasks.
+
