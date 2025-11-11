@@ -1,16 +1,8 @@
-// Example analytics route handlers for ClearPath
-export function getAnalytics(req, res) {
-  // placeholder logic — replace with real DB queries later
-  res.json({ message: 'Analytics data coming soon!' });
-}
+import express from "express";
+import { getAnalytics } from "../controllers/analyticsController.js";
 
-export function getUserStats(req, res) {
-  // placeholder logic — replace with real DB queries later
-  res.json({ message: 'User stats coming soon!' });
-}
+const router = express.Router();
 
-// Default export so `import analytics from './routes/analytics.js'` works
-export default {
-  getAnalytics,
-  getUserStats
-};
+router.get("/", getAnalytics);
+
+export default router;

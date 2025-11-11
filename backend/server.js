@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Routes
 app.use("/tasks", taskRoutes);
-//app.use("/analytics", analyticsRoutes);
+app.use("/analytics", analyticsRoutes);
 
 app.get("/test-db", async (req, res) => {
   try {
