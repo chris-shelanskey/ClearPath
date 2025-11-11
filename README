@@ -1,14 +1,14 @@
-# ClearPath
+ClearPath
 
 ClearPath is a task management system that help users prioritize and organize their workload. The system calculates task priority using an algorithm and gives insights through visual charts.
 
 So far I have the backend stuff mostly finished I think. I'm currently working on frontend. I also do not have anywhere to host the web app yet and will have to look into ways to get that done.
 
----
 
-##  Features
 
-###  Backend (Node.js + Express + PostgreSQL)
+Features
+
+Backend (Node.js + Express + PostgreSQL)
 - Automatic priority score calculation based on importance, effort, and due date
 - Sorting, filtering, and pagination support
 - Analytics endpoint returning:
@@ -18,16 +18,15 @@ So far I have the backend stuff mostly finished I think. I'm currently working o
   - Tasks due in the next 7 days
   - Priority score distribution
 
-###  Frontend (React)
+Frontend (React)
 - Pages:
   - **Dashboard** — displays analytics summary
   - **Tasks** — displays task list with dynamic data
   - **Insights** — charts showing task analytics
 
----
 
 
-##  Priority Score Algorithm
+Priority Score Algorithm
 
 This is the current algorithm I'm using, it could change to make it more complex but I went with something simple to start off so that I could get the project going.
 
@@ -40,5 +39,3 @@ Where:
 - `urgency = max(0, 10 - days_until_deadline)`
 
 This generates a dynamic score used to rank tasks.
-
----
