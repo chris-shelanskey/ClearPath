@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import taskRoutes from "./routes/tasks.js";
 import analyticsRoutes from "./routes/analytics.js";
+import pool from "./config/db.js";
 
 dotenv.config();
 const app = express();
@@ -12,12 +13,18 @@ app.use(express.json());
 
 // Routes
 app.use("/tasks", taskRoutes);
-app.use("/analytics", analyticsRoutes);
+//app.use("/analytics", analyticsRoutes);
 
-// Root test
-app.get("/", (req, res) => {
-  res.send("ClearPath Backend is running 🚀");
+app.get("/test-db", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT NOW()");
+    res.json({ connected: true, time: result.rows[0] });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ connected: false });
+  }
 });
+
 
 // Port
 const PORT = process.env.PORT || 5000;
