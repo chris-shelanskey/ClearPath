@@ -2,9 +2,7 @@ ClearPath
 
 ClearPath is a task management system that help users prioritize and organize their workload. The system calculates task priority using an algorithm and gives insights through visual charts.
 
-So far I have the backend stuff mostly finished I think. I'm currently working on frontend. I also do not have anywhere to host the web app yet and will have to look into ways to get that done.
-
-
+URL: https://clear-path-chi.vercel.app/
 
 Features
 
@@ -36,6 +34,6 @@ Where:
 
 - `importance` is from 1 to 5  
 - `effort` is estimated hours  
-- `urgency = max(0, 10 - days_until_deadline)`
+- `urgency = max(0, 10 - days_left)`
 
 
