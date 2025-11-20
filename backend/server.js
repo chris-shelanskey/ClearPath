@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",   // dev
-      "https://yourvercelapp.vercel.app" // prod
+      "https://clear-path-chi.vercel.app/tasks" // prod
     ],
     methods: "GET,POST,PUT,PATCH,DELETE"
   })
