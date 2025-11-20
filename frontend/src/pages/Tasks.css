@@ -1,0 +1,341 @@
+/* Shell */
+.tasks-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #e2e8f0;
+}
+
+/* Header */
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tasks-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #f9fafb;
+}
+
+.tasks-subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Error */
+.tasks-error {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.5);
+  color: #fecaca;
+  font-size: 14px;
+}
+
+/* Sections */
+.task-form-card,
+.task-table-card,
+.task-toolbar {
+  background: rgba(15, 23, 42, 0.72);
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 16px 18px;
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Form */
+.task-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px 16px;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.field input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4);
+}
+
+.field-submit {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Toolbar */
+.task-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  align-items: center;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-label {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.page-indicator {
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 6px 12px;
+  background: transparent;
+  color: #e5e7eb;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* primary */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+  color: #f9fafb;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb, #16a34a);
+}
+
+/* ghost */
+.btn-ghost {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.btn-ghost:hover {
+  background: rgba(30, 64, 175, 0.6);
+}
+
+/* chip buttons */
+.btn-chip {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+.btn-chip-active {
+  background: rgba(37, 99, 235, 0.9);
+  border-color: rgba(96, 165, 250, 0.9);
+}
+
+/* small buttons */
+.btn-small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* outline */
+.btn-outline {
+  border: 1px solid rgba(148, 163, 184, 0.7);
+}
+
+.btn-outline:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* danger */
+.btn-danger {
+  border: 1px solid rgba(248, 113, 113, 0.7);
+  color: #fecaca;
+}
+
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+/* Table */
+.tasks-table-wrapper {
+  margin-top: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 64, 175, 0.6);
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.tasks-table thead {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+.tasks-table th {
+  text-align: left;
+  color: #9ca3af;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.8);
+}
+
+.tasks-table tbody tr:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.tasks-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.tasks-table tbody tr:hover {
+  background: rgba(30, 64, 175, 0.65);
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.status-completed {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+/* Actions cell */
+.actions-cell {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+/* Loading & empty */
+.loading,
+.empty-state {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.tasks-add-form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tasks-add-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tasks-add-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 180px;
+  flex: 1;
+}
+
+.tasks-add-field label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.tasks-add-field input,
+.tasks-add-field select {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  background-color: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+  outline: none;
+}
+
+.tasks-add-field input:focus,
+.tasks-add-field select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.7);
+}
+
+.tasks-add-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+/* Inline actions in table */
+
+.tasks-inline-button {
+  background: transparent;
+  border: none;
+  color: #93c5fd;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 0;
+}
+
+.tasks-inline-button:hover {
+  text-decoration: underline;
+}
+
+.tasks-inline-button-danger {
+  color: #fca5a5;
+}

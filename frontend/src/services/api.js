@@ -1,8 +1,8 @@
 import axios from "axios";
-
 const API_URL = "http://localhost:5000";
 
-// TASK ENDPOINTS
+export const fetchAnalytics = () => axios.get(`${API_URL}/analytics`);
+
 export const fetchTasks = (params = {}) =>
   axios.get(`${API_URL}/tasks`, { params });
 
@@ -14,7 +14,3 @@ export const updateTask = (id, task) =>
 
 export const deleteTask = (id) =>
   axios.delete(`${API_URL}/tasks/${id}`);
-
-// ANALYTICS ENDPOINT
-export const fetchAnalytics = () =>
-  axios.get(`${API_URL}/analytics`);
