@@ -8,13 +8,20 @@ import pool from "./config/db.js";
 dotenv.config();
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://clear-path-chi.vercel.app",
+];
+
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",   // dev
-      "https://clear-path-chi.vercel.app/tasks" // prod
-    ],
-    methods: "GET,POST,PUT,PATCH,DELETE"
+    origin: (origin, callback) => {
+      // allow mobile apps / curl with no origin
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error("Not allowed by CORS"));
+    },
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
 app.use(express.json());
