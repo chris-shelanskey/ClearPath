@@ -25,8 +25,9 @@ export const getTasks = async (req, res) => {
     }
 
     if (priority) {
-      conditions.push(`priority = '${priority}'`);
+      conditions.push(`priority_score = '${priority}'`);
     }
+
 
     // Add WHERE conditions if any
     if (conditions.length > 0) {
