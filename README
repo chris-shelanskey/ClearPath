@@ -2,8 +2,6 @@ ClearPath
 
 ClearPath is a task management system that help users prioritize and organize their workload. The system calculates task priority using an algorithm and gives insights through visual charts.
 
-URL: https://clear-path-chi.vercel.app/
-
 Features
 
 Backend (Node.js + Express + PostgreSQL)
